@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <BorderPane prefHeight="600.0" prefWidth="800.0">
+      <bottom>
+         <ListView fx:id="log" prefHeight="158.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+      </bottom>
+      <left>
+         <ListView fx:id="apkListView" prefHeight="320.0" prefWidth="125.0" BorderPane.alignment="CENTER" />
+      </left>
+      <right>
+         <ListView fx:id="devices" prefHeight="317.0" prefWidth="124.0" BorderPane.alignment="CENTER" />
+      </right>
+      <top>
+         <TextField fx:id="address" prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+      </top>
+      <center>
+         <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+               <Button fx:id="start" onAction="#onStart" layoutX="40.0" layoutY="28.0" mnemonicParsing="false" text="下载并安装" />
+               <Button onAction="#refreshDevices" layoutX="441.0" layoutY="28.0" mnemonicParsing="false" text="刷新设备列表" />
+               <Button onAction="#refreshApks" layoutX="40.0" layoutY="112.0" mnemonicParsing="false" text="刷新APK列表" />
+            </children>
+         </Pane>
+      </center>
+   </BorderPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
